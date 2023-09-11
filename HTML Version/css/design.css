@@ -1,0 +1,175 @@
+@import url(index.css);
+header {
+    height: 20vh;
+}
+.body {
+    height: 140vh;
+    padding: 10%;
+
+}
+.portfolio {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 20px;
+    
+  }
+
+.pic1, .pic10 {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.pic2{
+    grid-column: span 2;
+    grid-row: span 2;
+    background-size:auto;
+    background-image: url("../images/2.jpg");
+}
+.pic3, .pic11 {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+.pic4{
+    grid-column: span 3;
+    grid-row: span 2;
+}
+.pic5 {
+    grid-column: span 3;
+    grid-row: span 4;
+    background-image: url("../images/3.jpeg");
+}
+.pic6, .pic7 {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+.pic6 {
+    background-image: url("../images/6.png");
+}
+.pic7{
+    background-image: url("../images/1.jpeg");
+}
+.pic8{
+    grid-column: span 3;
+    grid-row: span 3;
+    background-image: url("../images/4.jpeg");
+}
+.pic9 {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+.pic10 {
+    grid-column: span 2;
+    grid-row: span 3;
+    background-image: url("../images/7.jpeg");
+
+}
+.pic12{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.pic2, .pic5, .pic6, .pic7, .pic8, .pic10 {
+    position: relative;
+    outline: 5px solid white;
+    background-blend-mode: luminosity;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    opacity: 50%;
+    transition: all ease-in-out 1s;
+}
+
+
+:where(.pic2, .pic5, .pic6, .pic7, .pic8, .pic10):hover {
+    transform: scale(1.5);
+    z-index: 9999;
+    outline: none;
+    opacity: unset;
+    background-blend-mode:normal;
+}
+
+
+footer{
+    background-color: black;
+}
+
+footer ul {
+    background-color: white;
+}
+footer ul li a, li span, footer ul li{
+    color: black;
+}
+
+.qr {
+    top: 0%;
+    display: block;
+    position: relative;
+    margin: 0 auto 10vh auto;
+    width: 25%;
+
+}
+
+.qr img {
+    margin-right: 20px;
+    float: left;
+    width: 30%;
+}
+
+.qr h3 {
+    margin-top: 10px;
+}
+
+#Title {
+    position: relative;
+    text-decoration: underline;
+    margin: 0 auto;
+    width: 50em;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2em;
+    animation: typewriter_d_title 2s steps(40) 1s 1 normal both,
+    blinkTextCursorWhite 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter_d_title {
+    from {
+          width: 0;
+    }
+    to {
+          width: 10em;
+    }
+}
+
+@media (max-width: 855px) {
+
+    #Title {
+        padding-top: 20vh;
+    }
+}
+
+@media (max-width: 627px) {
+
+    #Title {
+        padding-top: 25vh;
+    }
+}
+@media (max-height: 535px) {
+
+    #Title {
+        padding-top: 30vh;
+    }
+}
+
+@media (max-height: 435px) {
+
+    #Title {
+        padding-top: 35vh;
+    }
+}
+
+@media (max-height: 380px) {
+
+    #Title {
+        padding-top: 45vh;
+    }
+}

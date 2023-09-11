@@ -1,0 +1,73 @@
+* {
+    color: black;
+    background-color: white;
+}
+header{
+    text-align: center;
+    height: 20vh;
+    
+}
+
+body {
+    background-color: white;
+}
+.schedule{
+    text-align: center;
+    padding:20px;
+    text-decoration: underline;
+    padding-right: 45px;
+    justify-content: center;
+}
+.table {
+    margin: 0 auto;
+    width: 80%;
+}
+table, th, td{
+    font-size: larger;
+    border: 3px  dashed black;
+}
+th, td {
+    padding: 10px;
+}
+th {
+    background-color: black;
+    color: white;
+}
+footer ul li a, footer h4 span, footer ul li{
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 855px) {
+
+    .schedule {
+        padding-top: 20vh;
+    }
+}
+
+@media (max-width: 627px) {
+
+    .schedule {
+        padding-top: 25vh;
+    }
+}
+@media (max-height: 535px) {
+
+    .schedule {
+        padding-top: 30vh;
+    }
+}
+
+@media (max-height: 435px) {
+
+    .schedule {
+        padding-top: 35vh;
+    }
+}
+
+@media (max-height: 380px) {
+
+    .schedule {
+        padding-top: 45vh;
+    }
+}
