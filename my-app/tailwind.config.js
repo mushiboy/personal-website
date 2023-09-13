@@ -1,0 +1,15 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        BebasNeue: ["Bebas Neue", "sans-serif"],
+        BlackOps: ["Black Ops One", "cursive"],
+        Moirai1: ["Moirai One", "cursive"],
+        RubikIso: ["Rubik Iso", "cursive"],
+      },
+    },
+  },
+  plugins: [],
+};
