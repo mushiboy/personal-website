@@ -2,13 +2,13 @@ import React, { useEffect, useLayoutEffect, useRef } from "react";
 import MyPhoto from "./images/Mugesh.png";
 import { gsap, Power4 } from "gsap";
 import { TextPlugin } from "gsap/all";
+import MyPicture from "./MyPicture";
 
 gsap.registerPlugin(TextPlugin);
 
 function AboutMe() {
   let marker = useRef(null);
   let texts = useRef(null);
-  const words = ["Developer", "Graphic Designer"];
 
   useEffect(() => {
     gsap.to(marker, {
@@ -19,19 +19,22 @@ function AboutMe() {
       ease: Power4.easeInOut,
     });
 
+    const words = ["Developer", "Graphic Designer"];
+
     let tlMaster = gsap.timeline({ repeat: -1 });
     words.forEach((word) => {
       let tlText = gsap.timeline({ repeat: 1, yoyo: true });
-      tlText.to(texts, { duration: 1, text: word });
+      tlText.to(texts, { duration: 2, text: word });
       tlMaster.add(tlText);
     });
-  }, [texts, words]);
+  }, [texts]);
 
   return (
     <div>
       <div className="">
         <div className="about-me w-2/3 flex">
-          <img src={MyPhoto} alt="Mugesh" id="my_photo" className="w-1/3" />
+          <MyPicture image={MyPhoto} class="w-1/3" />
+
           <h1>I'm a</h1>
           <div
             ref={(item) => {
@@ -43,7 +46,7 @@ function AboutMe() {
               marker = item;
             }}
           >
-            |
+            _
           </span>
           <p>
             Grounded and Solution-oriented Machine Learning Enthusiast with a
