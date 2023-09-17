@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import CSSPlugin from "gsap/CSSPlugin";
 import { Power4 } from "gsap";
@@ -6,6 +6,10 @@ import { Power4 } from "gsap";
 gsap.registerPlugin(CSSPlugin);
 
 function MyPicture(props) {
+  let container = useRef(null);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(0);
+
   useEffect(() => {
     let tl = gsap.timeline({ repeat: 0 });
     tl.to(".displacement", {
@@ -15,12 +19,22 @@ function MyPicture(props) {
       duration: 5,
       ease: Power4.easeIn,
     });
+
+    setContainerWidth(container.clientWidth);
+    setContainerHeight(container.clientHeight);
   });
 
   return (
-    <div className={props.class}>
+    <div
+      className={props.class}
+      ref={(item) => {
+        container = item;
+      }}
+    >
       <svg
-        viewBox="0 0 1920 852"
+        viewBox={`0 0 ${containerWidth} ${containerHeight}`}
+        width={"100%"}
+        height={"100%"}
         fill="none"
         preserveAspectRatio="xMidYMin slice"
         style={{ zIndex: -1 }}
@@ -50,9 +64,9 @@ function MyPicture(props) {
           </filter>
           <mask id="circleMask">
             <circle
-              cx="600"
-              cy="300"
-              r="0"
+              cx="50%"
+              cy="50%"
+              r="100"
               fill="white"
               className="displacement"
               style={{ filter: "url(#filter)" }}
@@ -64,9 +78,9 @@ function MyPicture(props) {
           xlinkHref={props.image}
           alt="Mugesh"
           id="my_photo"
-          className=""
-          width={"100%"}
-          height={"100%"}
+          className={props.imgClass}
+          width="100%"
+          height="100%"
           mask="url(#circleMask)"
         />
       </svg>

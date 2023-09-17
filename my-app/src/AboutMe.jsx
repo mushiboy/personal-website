@@ -1,8 +1,9 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import MyPhoto from "./images/Mugesh.png";
 import { gsap, Power4 } from "gsap";
 import { TextPlugin } from "gsap/all";
 import MyPicture from "./MyPicture";
+import Menu from "./Menu";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -30,30 +31,26 @@ function AboutMe() {
   }, [texts]);
 
   return (
-    <div>
-      <div className="">
-        <div className="about-me w-2/3 flex">
-          <MyPicture image={MyPhoto} class="w-1/3" />
-
-          <h1>I'm a</h1>
-          <div
+    <div className="flex flex-col justify-center items-center h-3/5 mt-10">
+      <Menu />
+      <MyPicture image={MyPhoto} class="w-full h-5/6" imgClass="" />
+      <div className="w-full h-1/6">
+        <div className="">
+          <span className="font-VT323 text-2xl">I'm a </span>
+          <span
+            className="font-VT323 text-2xl"
             ref={(item) => {
               texts = item;
             }}
-          ></div>
+          ></span>
           <span
+            className="inline-block text-2xl"
             ref={(item) => {
               marker = item;
             }}
           >
             _
           </span>
-          <p>
-            Grounded and Solution-oriented Machine Learning Enthusiast with a
-            strong determination to help others through modern technologies.
-            Adept at motivating self and others. Passionate about ML and Data
-            Science and how it can solve modern problems
-          </p>
         </div>
       </div>
     </div>
