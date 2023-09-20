@@ -22,7 +22,7 @@ function MyPicture(props) {
 
     setContainerWidth(container.clientWidth);
     setContainerHeight(container.clientHeight);
-  });
+  }, []);
 
   return (
     <div
@@ -65,8 +65,8 @@ function MyPicture(props) {
           <mask id="circleMask">
             <circle
               cx="50%"
-              cy="50%"
-              r="100"
+              cy="100%"
+              r="20"
               fill="white"
               className="displacement"
               style={{ filter: "url(#filter)" }}

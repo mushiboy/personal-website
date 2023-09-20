@@ -9,6 +9,11 @@ module.exports = {
         Moirai1: ["Moirai One", "cursive"],
         RubikIso: ["Rubik Iso", "cursive"],
         VT323: ["VT323", "monospace"],
+        Fipps: ["Fipps", "monospace"],
+        PWar: ["PWar", "monospace"],
+      },
+      minWidth: {
+        screen: "100vw",
       },
     },
   },

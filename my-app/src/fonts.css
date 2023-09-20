@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Fipps';
+    src: url('./fonts/Fipps.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PWar';
+    src: url('./fonts/Pixelic\ War.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
