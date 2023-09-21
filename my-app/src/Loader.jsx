@@ -14,7 +14,7 @@ function Loader() {
         }
         tlRepeat={0}
         textRepeat={1}
-        textClass="font-VT323 text-7xl text-white inline"
+        textClass="font-Pixel text-7xl text-white inline"
         markerClass="inline-block text-4xl text-white"
         duration={5}
         yoyo={true}

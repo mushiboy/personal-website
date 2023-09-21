@@ -11,3 +11,13 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: 'pixel';
+    src:url('./fonts/pixel/snootorg-pixel10.ttf.woff') format('woff'),
+        url('./fonts/pixel/snootorg-pixel10.ttf.svg') format('svg'),
+        url('./fonts/pixel/snootorg-pixel10.ttf.eot'),
+        url('./fonts/pixel/snootorg-pixel10.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}

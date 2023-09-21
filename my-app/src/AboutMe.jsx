@@ -49,13 +49,13 @@ function AboutMe() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 8, duration: 1, staggerChildren: 0.3 }}
       >
-        <span className="font-VT323 text-2xl text-white inline">I'm a </span>
+        <span className="font-Pixel text-2xl text-white inline">I'm a </span>
         <Typewriter
           class="text-center ml-2 "
           words={["Student", "Developer", "Graphic Designer"]}
           tlRepeat={-1}
           textRepeat={1}
-          textClass="font-VT323 text-7xl text-white"
+          textClass="font-Pixel text-7xl text-white"
           markerClass="inline-block text-2xl text-white"
           duration={2}
           yoyo={true}

@@ -5,7 +5,7 @@ function MenuItem(props) {
   return (
     <motion.div>
       <motion.button
-        className={props.menuClass}
+        className="p-5 w-32 h-32 bg-white font-Pixel text-3xl rounded-lg flex items-center justify-center"
         whileHover={{
           scale: 1,
           rotate: props.rotate,
@@ -15,7 +15,7 @@ function MenuItem(props) {
           color: "#fff",
         }}
       >
-        {props.title}
+        <h1 className="text-center ml-1.5">{props.title}</h1>
       </motion.button>
     </motion.div>
   );

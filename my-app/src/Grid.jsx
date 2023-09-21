@@ -18,14 +18,14 @@ const generateRectangles = () => {
 
   return rectangles;
 };
-
 const Grid = (OgComponent) => {
+  let rectangles = generateRectangles();
   return () => (
-    <div>
+    <>
       <OgComponent />
-      <div className="fixed min-h-screen  flex items-center justify-center">
+      <div className="fixed min-h-screen flex items-center justify-center z-50">
         <motion.svg width="100vw" height="100vh">
-          {generateRectangles().map((rectangle) => (
+          {rectangles.map((rectangle) => (
             <motion.rect
               className=""
               key={`${rectangle.x}-${rectangle.y}`}
@@ -34,10 +34,11 @@ const Grid = (OgComponent) => {
               width="130"
               height="130"
               fill="white"
-              initial={{ visibility: "visible" }}
-              animate={{ visibility: "hidden" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 1 }}
               transition={{
-                duration: 0.5,
+                duration: 0.1,
                 delay: rectangle.delay,
                 ease: "easeOut",
               }}
@@ -45,7 +46,7 @@ const Grid = (OgComponent) => {
           ))}
         </motion.svg>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -27,11 +27,7 @@ function Menu() {
         transition={{ delay: 8.5, duration: 0.5 }}
       >
         <Link className="" to="">
-          <MenuItem
-            title="Home"
-            menuClass="p-5 w-32 h-32 bg-white font-VT323 text-3xl"
-            rotate={-45}
-          />
+          <MenuItem title="Home" rotate={-45} />
         </Link>
       </motion.div>
       <motion.div
@@ -40,11 +36,7 @@ function Menu() {
         transition={{ delay: 8.7, duration: 0.5 }}
       >
         <Link className="" to="/projects">
-          <MenuItem
-            title="Projects"
-            menuClass="p-5 w-32 h-32 bg-white font-VT323 text-3xl"
-            rotate={45}
-          />
+          <MenuItem title="Projects" rotate={45} />
         </Link>
       </motion.div>
       <motion.div
@@ -53,11 +45,7 @@ function Menu() {
         transition={{ delay: 8.9, duration: 0.5 }}
       >
         <Link className="" to="contact-me">
-          <MenuItem
-            title="Contact Me"
-            menuClass="p-5 w-32 h-32 bg-white font-VT323 text-3xl"
-            rotate={-45}
-          />
+          <MenuItem title="Contact Me" rotate={-45} />
         </Link>
       </motion.div>
 
@@ -67,11 +55,7 @@ function Menu() {
         transition={{ delay: 9.1, duration: 0.5 }}
       >
         <Link className="" to="/resume">
-          <MenuItem
-            title="My Resume"
-            menuClass="p-5 w-32 h-32 bg-white font-VT323 text-3xl"
-            rotate={45}
-          />
+          <MenuItem title="My Resume" rotate={45} />
         </Link>
       </motion.div>
     </motion.div>

@@ -11,6 +11,7 @@ module.exports = {
         VT323: ["VT323", "monospace"],
         Fipps: ["Fipps", "monospace"],
         PWar: ["PWar", "monospace"],
+        Pixel: ["pixel", "monospace"],
       },
       minWidth: {
         screen: "100vw",
