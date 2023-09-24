@@ -4,8 +4,8 @@ import { TextPlugin } from "gsap/all";
 import { motion } from "framer-motion";
 import Typewriter from "./Typewriter";
 import Menu from "./Menu";
-import Cursor from "./Cursor";
 import Image from "./Image";
+import Cursor from "./Cursor";
 
 gsap.registerPlugin(TextPlugin);
 
