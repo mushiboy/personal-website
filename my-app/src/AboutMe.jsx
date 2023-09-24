@@ -68,7 +68,6 @@ function AboutMe() {
       >
         <Image />
       </motion.div>
-      <Cursor />
     </div>
   );
 }
