@@ -4,7 +4,6 @@ import AboutMe from "./AboutMe";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Contact from "./Contact";
 import Projects from "./Projects";
-import Cursor from "./Cursor";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +23,6 @@ function App() {
         <Loader />
       ) : (
         <>
-          <Cursor />
           <Routes location={location} key={location.pathname}>
             <Route index element={<AboutMe />} />
             <Route path="/contact-me" element={<Contact />} />
