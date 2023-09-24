@@ -8,7 +8,6 @@ import instaImage from "./images/insta.png";
 import fbImage from "./images/fb.png";
 import wpImage from "./images/wp.png";
 import { motion } from "framer-motion";
-import Cursor from "./Cursor";
 
 function Contact() {
   return (
@@ -96,7 +95,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      <Cursor />
     </div>
   );
 }
