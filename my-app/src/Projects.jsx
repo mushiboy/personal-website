@@ -4,7 +4,6 @@ import Grid from "./Grid";
 import MenuItem from "./MenuItem";
 import { motion } from "framer-motion";
 import ProjectsContent from "./ProjectsContent";
-import Cursor from "./Cursor";
 
 function Projects() {
   const [isChecked, setIsChecked] = useState(false);
@@ -100,7 +99,6 @@ function Projects() {
           </label>
         </div>
       </div>
-      <Cursor />
     </div>
   );
 }
