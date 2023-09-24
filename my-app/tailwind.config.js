@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      translate: {
+        39: "9.75rem",
+      },
       fontFamily: {
         BebasNeue: ["Bebas Neue", "sans-serif"],
         BlackOps: ["Black Ops One", "cursive"],
@@ -16,7 +19,10 @@ module.exports = {
       minWidth: {
         screen: "100vw",
       },
+      scale: {
+        60: "0.60",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

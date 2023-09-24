@@ -12,50 +12,43 @@ function Menu() {
   };
   return (
     <motion.div
-      className="w-5/6 lg:ml-56 sm:ml-28 grid grid-cols-4 items-center justify-center absolute bottom-10"
+      className="w-5/6 sm:ml-28 grid grid-cols-3 items-center justify-center absolute bottom-10 translate-x-2"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
-        delay: 8.5,
+        delay: 3.5,
         duration: 2,
         ease: customEases.bounce,
       }}
     >
       <motion.div
+        className="flex items-center justify-center h-full"
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 8.5, duration: 0.5 }}
+        transition={{ delay: 3.5, duration: 0.5 }}
       >
         <Link className="" to="">
-          <MenuItem title="Home" rotate={-45} />
+          <MenuItem title="Home" rotate={-15} />
         </Link>
       </motion.div>
       <motion.div
+        className="flex items-center justify-center"
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 8.7, duration: 0.5 }}
+        transition={{ delay: 3.7, duration: 0.5 }}
       >
         <Link className="" to="/projects">
-          <MenuItem title="Projects" rotate={45} />
+          <MenuItem title="Projects" rotate={15} />
         </Link>
       </motion.div>
       <motion.div
+        className="flex items-center justify-center"
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 8.9, duration: 0.5 }}
+        transition={{ delay: 3.9, duration: 0.5 }}
       >
         <Link className="" to="contact-me">
-          <MenuItem title="Contact Me" rotate={-45} />
-        </Link>
-      </motion.div>
-
-      <motion.div
-        initial={{ x: -50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 9.1, duration: 0.5 }}
-      >
-        <Link className="" to="/resume">
-          <MenuItem title="My Resume" rotate={45} />
+          <MenuItem title="Contact Me" rotate={-15} />
         </Link>
       </motion.div>
     </motion.div>

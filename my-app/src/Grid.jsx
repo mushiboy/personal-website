@@ -23,24 +23,26 @@ const Grid = (OgComponent) => {
   return () => (
     <>
       <OgComponent />
-      <div className="fixed min-h-screen flex items-center justify-center z-50">
+      <div className="fixed min-h-screen flex items-center justify-center z-10 top-0 pointer-events-none">
         <motion.svg width="100vw" height="100vh">
           {rectangles.map((rectangle) => (
             <motion.rect
-              className=""
+              className="z-50"
               key={`${rectangle.x}-${rectangle.y}`}
               x={rectangle.x}
               y={rectangle.y}
               width="130"
               height="130"
               fill="white"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 1 }}
+              initial={{ opacity: 1, visibility: "visible" }}
+              animate={{ opacity: 0, zIndex: -50 }}
+              exit={{
+                opacity: 0,
+              }}
               transition={{
-                duration: 0.1,
+                duration: 0.5,
                 delay: rectangle.delay,
-                ease: "easeOut",
+                ease: [0.18, 0.89, 0.32, 1.28],
               }}
             />
           ))}

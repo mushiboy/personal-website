@@ -1,5 +1,7 @@
+import { useState } from "react";
 import React from "react";
-import { motion } from "framer-motion";
+import { easeIn, easeInOut, easeOut, motion } from "framer-motion";
+import myImage from "./images/MugeshRGB.png";
 const customEases = {
   easeInOutBack: [0.68, -0.55, 0.27, 1.55],
   bounce: [0.18, 0.89, 0.32, 1.28],
@@ -8,6 +10,11 @@ const customEases = {
 };
 
 function PixelBody() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
   return (
     <div className="absolute grid place-items-center w-screen h-screen lg:mt-16 overflow-hidden">
       <motion.svg
@@ -17,6 +24,9 @@ function PixelBody() {
         initial={{ y: 100, visibility: "hidden", scale: 0.5 }}
         animate={{ y: -140, visibility: "unset", scale: 1 }}
         transition={{ duration: 2, delay: 4.5, ease: customEases.slowStart }}
+        style={{ opacity: isHovered ? 0 : 1 }}
+        onHoverStart={handleHover}
+        onHoverEnd={handleHover}
       >
         <defs>
           <style>
@@ -37,6 +47,7 @@ function PixelBody() {
           </g>
         </g>
       </motion.svg>
+
       <motion.div
         className="h-3 bg-white origin-center rounded-lg"
         style={{ transformOrigin: "center" }}

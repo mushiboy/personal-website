@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Loader from "./Loader";
 import AboutMe from "./AboutMe";
 import { Routes, Route, useLocation } from "react-router-dom";
-import Resume from "./Resume";
 import Contact from "./Contact";
 import Projects from "./Projects";
 
@@ -26,7 +25,6 @@ function App() {
         <>
           <Routes location={location} key={location.pathname}>
             <Route index element={<AboutMe />} />
-            <Route path="/resume" element={<Resume />} />
             <Route path="/contact-me" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
           </Routes>

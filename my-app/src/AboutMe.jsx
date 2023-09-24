@@ -3,9 +3,9 @@ import { gsap, Power4 } from "gsap";
 import { TextPlugin } from "gsap/all";
 import { motion } from "framer-motion";
 import Typewriter from "./Typewriter";
-import PixelBody from "./PixelBody";
 import Menu from "./Menu";
-import Grid from "./Grid";
+import Cursor from "./Cursor";
+import Image from "./Image";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -40,14 +40,11 @@ function AboutMe() {
       >
         MUGESH
       </motion.span>
-      <motion.div>
-        <PixelBody />
-      </motion.div>
       <motion.div
-        className="w-full absolute lg:bottom-60 flex justify-center items-baseline"
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 8, duration: 1, staggerChildren: 0.3 }}
+        className="w-full absolute lg:bottom-48  sm:bottom-60 flex justify-center items-baseline"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 3.5, duration: 1, staggerChildren: 0.3 }}
       >
         <span className="font-Pixel text-2xl text-white inline">I'm a </span>
         <Typewriter
@@ -59,13 +56,22 @@ function AboutMe() {
           markerClass="inline-block text-2xl text-white"
           duration={2}
           yoyo={true}
+          lg
           ease={Power4.easeInOut}
           load={false}
         />
       </motion.div>
       <Menu />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, delay: 3 }}
+      >
+        <Image />
+      </motion.div>
+      <Cursor />
     </div>
   );
 }
 
-export default Grid(AboutMe);
+export default AboutMe;
