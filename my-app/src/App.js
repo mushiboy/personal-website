@@ -4,6 +4,7 @@ import AboutMe from "./AboutMe";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Contact from "./Contact";
 import Projects from "./Projects";
+import Cursor from "./Cursor";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <Cursor />
       {loading ? (
         <Loader />
       ) : (
